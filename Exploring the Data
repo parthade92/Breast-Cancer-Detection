@@ -1,0 +1,17 @@
+df.describe()
+sns.countplot(df['diagnosis'],label="count")
+len(df.columns)
+corr = df.corr()
+corr
+corr.shape
+plt.figure(figsize=(8,8))
+sns.heatmap(corr);
+df.head()
+df['diagnosis'] 
+df['diagnosis'] = df['diagnosis'].map({'M':1,'B':0})
+df.head()
+df['diagnosis'].unique()
+X = df.drop('diagnosis',axis=1)  #independent variable 
+X.head()
+y = df['diagnosis']  #target variable
+y.head()
