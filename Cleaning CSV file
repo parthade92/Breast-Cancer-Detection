@@ -1,0 +1,31 @@
+import warnings
+warnings.filterwarnings('ignore')
+import numpy as mp
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+df = pd.read_csv("https://raw.githubusercontent.com/ingledarshan/AIML-B2/main/data.csv")
+df.head()
+df.head(10)
+df
+df.tail()
+df.columns
+df.info()
+df['Unnamed: 32']
+df = df.drop("Unnamed: 32",axis=1)
+#df.drop("Unnamed: 32",axis=1,inplace=True)
+df.info()
+df.drop("id",axis=1,inplace=True)
+df
+l = list(df.columns)
+l
+features_mean = l[1:11]
+features_se = l[11:21]
+features_worst = l[21:]
+print(features_mean)
+print(features_se)
+print(features_worst)
+df['diagnosis']
+df['diagnosis'].unique()
+df['diagnosis'].value_counts()
+df.shape
